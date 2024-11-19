@@ -23,7 +23,7 @@
 body {
     display: grid;
     height: 100vh;
-    grid-template: 1fr 3fr / 1fr 5fr;
+    grid-template: 1fr 3fr / 400px 1fr;
 }
 
 img {
@@ -84,30 +84,22 @@ ul {
 
 .header {
     background-color: white;
+    padding: 30px 40px;
+
     display: grid;
-    grid-template-columns: 1000px 1fr;
+    grid-template-rows: 60px 1fr;
+    gap: 30px;
 }
 
-.left,
-.right {
+.top,
+.bottom,
+.search-bar,
+.status-icons {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    grid-row: 1 / 3;
 }
 
-.left {
-    padding: 30px 5px 30px 60px;
-}
-
-.right {
-    padding: 30px 60px 30px 5px;
-}
-
-.search-bar {
-    align-self: start;
-    width: 100%;
-}
 
 .search-bar .icon {
     width: 30px;
@@ -115,9 +107,9 @@ ul {
 }
 
 .search-bar .bar {
-    width: 90%;
-    height: 30px;
-    border-radius: 20px;
+    width: 900px;
+    height: 40px;
+    border-radius: 25px;
     background-color: var(--gray);
 }
 
@@ -129,9 +121,10 @@ ul {
 }
 
 .user-info .icon {
-    width: 100px;
-    height: 100px;
-    background-color: brown;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: var(--gray);
 
     grid-row: 1 / 3;
 }
@@ -143,31 +136,33 @@ ul {
 .status-icons {
     display: flex;
     gap: 30px;
-    align-items: center;
     justify-content: end;
+    padding: 10px;
 }
 
 .status-icons .bell {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
 }
 
 .status-icons .icon {
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
     background-color: gray;
 }
 
-.status-icons .span {
+.status-icons span {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .header .buttons {
     display: flex;
     justify-content: end;
     gap: 30px;
-    align-items: center;
+    align-self: center;
 }
 
 .header button {
@@ -181,11 +176,6 @@ ul {
     color: white;
     background-color: var(--blue);
     font-weight: bold;
-}
-
-
-.header>* {
-    border: 1px black solid;
 }
 
 main {
