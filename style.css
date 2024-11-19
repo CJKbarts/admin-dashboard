@@ -180,8 +180,15 @@ ul {
 
 main {
     background-color: var(--gray);
+    padding: 40px 30px;
+
     display: grid;
     grid-template-columns: 3fr 1fr;
+    column-gap: 40px;
+}
+
+main .title {
+    margin-bottom: 20px;
 }
 
 .projects {
@@ -191,9 +198,9 @@ main {
 .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 275px);
     justify-items: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 .card {
@@ -202,8 +209,6 @@ main {
 }
 
 .projects .card {
-    width: 400px;
-    height: 225px;
     overflow: hidden;
 
     display: grid;
@@ -215,7 +220,8 @@ main {
 }
 
 .projects .card .content {
-    padding: 30px 20px;
+    padding: 40px 30px;
+    font-size: 1.2rem;
 
     display: flex;
     flex-direction: column;
@@ -223,16 +229,21 @@ main {
 }
 
 .projects .card .symbols {
-    background-color: var(--gray);
-    height: 25px;
+    height: 30px;
     width: 150px;
 
+    display: flex;
+    justify-content: space-between;
     align-self: flex-end;
+}
+
+.projects .icon {
+    width: 30px;
+    height: 30px;
 }
 
 .announcements,
 .trending {
-    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
